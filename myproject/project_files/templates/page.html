@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html  lang="pl">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="utf-8">
+        <meta name="keywords" content="portfolio">
+        <meta name="description" content="">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/page.css') }}" media="screen">
+        
+         <!-- <script class="u-script" type="text/javascript" src="../static/js/jquery-1.9.1.min.js" defer=""></script> -->
+     </head>
+    <body>
+        {% block content %}
+    <div id="title" style="color:{{ session['color'] }}; background-color: {{ session['second_color']}}">
+        <h2 class="animate-charcter"> Welcome in my page </h2>
+    </div>
+    <div id="center" style="color:{{ session['color'] }}; background-color: {{ session['second_color']}}" >
+            <h3> {{ session['name'] }} </h3> <br>
+            <h3> {{ session['profession'] }} </h3> <br>
+            <h3> {{ session['birthday'] }} </h3>
+    </div>
+
+    <div id="profile_image">
+        <img src="./static/{{ session['file']}}">
+    </div>
+    <div id="my_portfolio" style="background-color: {{ session['second_color'] }}">
+        <i> MY PORTFOLIO</i>
+    </div>
+    <div id="center_two" style="color:{{ session['second_color'] }}; background-color: {{ session['color']}}" >
+        <h1><br></h1>
+    </div>
+    <div id="description" style="background-color: {{ session['color'] }};" >
+        <span style="font-size: 60px; font-weight:bold; letter-spacing:6px"></span> 
+        {{ session['info'] }}
+        <br>
+        <br>
+            <a href="http://127.0.0.1:5000/more">
+                <button class="more_submit" value="LEARN MORE" style="color:{{ session['color'] }}; background-color:{{ session['second_color'] }}; -webkit-text-stroke: 0.1px black;"
+                onmouseover="this.style.backgroundColor='white'" onmouseout="this.style.backgroundColor='{{ session['second_color']}}'">
+                 LEARN MORE</button>
+            </a>
+    </div>
+    <div id="end"  style="color:{{ session['color'] }}; background-color: {{ session['second_color']}}">
+        <h3 class=""> Contact with Me</h3>
+        <table class="end_info">
+          <tr>
+            <h4><td class="td_text">e-mail: {{ session['e_mail'] }} </td></h4>
+          </tr>
+          <tr>
+            <h4><td class="td_text">phone number: {{ session['phone'] }} </td></h4>
+          </tr>
+          <tr>
+            <h4><td class="td_text">city: {{ session['city'] }} </td></h4>
+          </tr>
+      </table>
+      <p></p>
+      <p class="grey_text"> </p>
+    </div>
+    </body>
+    {% endblock %}
+</html>

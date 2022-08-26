@@ -1,0 +1,32 @@
+{% block content %}
+<form method="POST" action="">
+  {{ form.csrf_token }}
+
+  {{ form.first_name(placeholder="Enter first name", class="main_form") }}
+  {{ form.second_name(placeholder="Enter second name",  class="main_form") }}
+  {{ form.e_mail(placeholder="Enter e-mail",  class="main_form") }}
+  {{ form.place_of_residence(placeholder="Enter city",  class="main_form") }}
+  {{ form.birthday(placeholder="Enter date of birth",  class="main_form") }}
+  <br>
+  {{ form.info(placeholder="Write something about you in some sentences", rows="10", cols="50", class="info_area") }}
+  {{form.button(class="submit_button") }}
+  <input type="color" id="select_color" class="select_color", value="#192338">
+  <label for="select_color" class="color_label" > select first color </label>
+  <br><br>
+  <input type="color" id="select_color_2" class="select_color", value="#9de7e7">
+  <label for="select_color" class="color_label"> select second color </label>
+  <br> <br>
+  <label for="file" class="file_label"> 
+    <img src="{{ url_for('static', filename='gallery.png') }}" style="width:50px; height:50px;">
+  </label>       
+  {{ form.file(id="file", class="file_input" ) }}
+</form>
+{% endblock %}
+<!-- <td><a href="/update/{{x.id}}"> update </a></td>
+  <td><a href="/delete/{{x.id}}"> delete </a></td> -->
+
+
+
+
+
+        {% comment %} <img src="./static/reload.png" onClick="window.location.reload();" width="20%" height="20%" style="cursor:pointer;"> {% endcomment %}

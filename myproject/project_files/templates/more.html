@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html  lang="pl">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="utf-8">
+        <meta name="keywords" content="more info">
+        <meta name="description" content="">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/more.css') }}" media="screen">
+        <script class="u-script" type="text/javascript" src="{{ url_for('static', filename="js/more.js")}}" defer=""></script>
+    </head>
+    <body>
+        <div id="title" style="color:{{ session['color'] }}; background-color: {{ session['second_color']}}">
+
+            {% block content %}
+            {% with messages = get_flashed_messages() %}
+              {% if messages %}
+                <ul class="bad_flash">
+                  {% for message in messages %}
+                  <div id="box">
+                    <br>
+                    <span id="box">{{ message }} <span>
+                    <br>
+                    <br>
+                 </div>
+                  {% endfor %}
+                </ul>
+              {% endif %}
+            {% endwith %}
+          {% endblock %}
+  
+            <p style="margin-left:15%;  padding:6%; margin-right:15%;">
+                {{ session['second_info']}}
+            </p>
+        </div>
+        <div id="expirence" style="color:{{ session['second_color'] }}; background-color: {{ session['color']}}">
+            <br>
+            <table class="tables">
+                <tr>
+                    <th style="width:70%; letter-spacing:0.5px;"> Expirences</th>
+                    <th style="width:10%; letter-spacing:0.5px;text-align:center;"> Actions</th>   
+                </tr>
+                    {% for expirence in expirences %}
+                <tr>
+                    <td>{{expirence.name}} </td>
+                    <td >
+                        <a class="delete_button" href="/delete/{{expirence.id}}"> delete </a> 
+                    </td>
+                </tr>
+                    {% endfor %}
+            </table>
+            <br>
+            <hr style="color:{{ session['color'] }}; background-color: {{ session['second_color']}}">
+            <br>
+        </div>
+        <div id="skills" style="color:{{ session['second_color'] }}; background-color: {{ session['color']}}">
+            <br>
+            <table class="tables">
+                <tr>
+                    <th style="width:70%; letter-spacing:0.5px;"> Skills</th>
+                    <th style="width:10%; letter-spacing:0.5px;text-align:center;"> Actions</th>
+                </tr>
+                    {% for skill in skills %}
+                <tr>
+                    <td>{{skill.name}}</td>
+                    <td >
+                        <a class="delete_button"  href="/delete/{{skill.id}}">delete </a>  
+                    </td>
+                    {% endfor %}                    
+                </tr>
+            </table>
+            <br>
+            <hr style="color:{{ session['color'] }}; background-color: {{ session['second_color']}}">
+            <br>
+        </div>
+        <div id="languages" style="color:{{ session['second_color'] }}; background-color: {{ session['color']}}">
+            <br>
+            <table class="tables">
+                <tr>
+                    <th style="width:70%; letter-spacing:0.5px;"> languages</th>
+                    <th style="width:10%; letter-spacing:0.5px;text-align:center;"> Actions</th>
+                </tr>
+                    {% for language in languages %}
+                <tr>
+                    <td>{{language.name}}</td>
+                    <td >
+                        <a class="delete_button"  href="/delete/{{language.id}}">delete </a>  
+                    </td>
+                    {% endfor %}                    
+                </tr>
+            </table>
+            <br>
+            <hr style="color:{{ session['color'] }}; background-color: {{ session['second_color']}}">
+            <br>
+        </div>
+        <div id="interests" style="color:{{ session['second_color'] }}; background-color: {{ session['color']}}">
+            <br>
+            <table class="tables">
+                <tr>
+                    <th style="width:70%; letter-spacing:0.5px;"> Interests</th>
+                    <th style="width:10%; letter-spacing:0.5px;text-align:center;"> Actions</th>
+                </tr>
+                    {% for interest in interests %}
+                <tr>
+                    <td>{{interest.name}}</td>
+                    <td style="text-align:left;">
+                        <a class="delete_button" href="/delete/{{interest.id}}" > delete </a> 
+                    </td>
+                </tr>
+                    {% endfor %}                
+            </table>
+            <br>
+            <hr style="color:{{ session['color'] }}; background-color: {{ session['second_color']}}">
+            <br>
+            <form action="/more" method='post'>
+                <input type="text" name="form_content" id="content" class="main_form">
+                <select name="membership" style="color:{{ session['color'] }}; background-color: {{ session['second_color']}}">
+                    <option value="expirence">expirence</option>
+                    <option value="skill">skill</option>
+                    <option value="interest">interest</option>
+                    <option value="language">language</option>
+                </select>
+                <input type="submit" class="submit_button" value="add new info!">
+            </form>
+        </div>
+        <div id="end" style="color:{{ session['color'] }}; background-color: {{ session['second_color']}}">
+            <br>
+            <p style="padding:15px; font-size:19px; margin-left:auto; margin-right:auto"> <i>If you want delete something or start from zero... </i> </p>
+            <a href='/logout'> CLICK HERE </a>
+            <br>
+            <br>
+        </div>
+    </body>
+</html>

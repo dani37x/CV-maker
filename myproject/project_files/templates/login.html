@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html  lang="pl">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="utf-8">
+        <meta name="keywords" content="portfolio">
+        <meta name="description" content="">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/loginn.css') }}" media="screen">
+        <script class="u-script" type="text/javascript" src="{{ url_for('static', filename="js/loginn.js")}}" defer=""></script>
+    </head>
+    <body>
+    <div id="title">
+        <h2> Enter your data </h2> <br>
+        <i>In this website you can create own CV, with your data, image and style.  </i>
+        <br>
+        <br>
+        
+        {% block content %}
+          {% with messages = get_flashed_messages() %}
+            {% if messages %}
+              <ul class="bad_flash">
+                {% for message in messages %}
+                <div id="box">
+                  <br>
+                  <span id="box">{{ message }} <span>  
+                  <br>
+                  <br>
+               </div>
+                {% endfor %}
+              </ul>
+            {% endif %}
+          {% endwith %}
+        {% endblock %}
+
+    </div>  
+    <div id="center">
+      <form method="POST" action="" id="data_form" enctype="multipart/form-data">
+        <input type="text" class="main_form" name="name" placeholder="Enter your name" size="30" required autofocus>
+        <input type="text" class="main_form" name="profession" placeholder="Enter your profession" size="30" required>
+        <input type="email" class="main_form" name="e_mail" placeholder="Enter your e-mail" size="30" required>
+        <input type="text" class="main_form" name="city" placeholder="Enter your city" size="30">
+        <input type="date" class="main_form" name="birthday" placeholder="Enter your date of birthday" size="15" required>
+        <input type="text" class="main_form" name="phone" placeholder="Enter your phone number" size="20" required>
+        <input type="color" class="file_input" name="color" value="#192338" required>
+        <input type="color" class="file_input" name="second_color" value="#C0F0F1" required>
+        <input type="file" class="main_form" name="file" required>
+        <br>
+        <textarea name="info" class="area"form="data_form" rows="6" cols="105" 
+        placeholder="Write something about you in some sentences. Remember about Entries :)" size="350" required></textarea>
+        <textarea name="second_info" class="area"form="data_form" rows="6" cols="105" 
+        placeholder="There should be informations about your proffesion, skills, expiriences and especially about you!" size="200" required></textarea>
+        <br>
+        <input type="submit" class="submit_button" value="send data">
+      </form>
+    </div>
+    <div id="end">
+        <h3 class=""> Contact with Us</h3>
+        <table class="end_info">
+          <tr>
+            <h4><td class="td_text">e-mail: bussiness@mail.com </td></h4>
+          </tr>
+          <tr>
+            <h4><td class="td_text">phone number: 37 (234) 775-191 </td></h4>
+          </tr>
+        </table>
+        <p></p>
+        <p class="grey_text"> This page is only for my portfolio :) </p>
+    </div>
+    </body>
+</html>
