@@ -1,0 +1,205 @@
+body{
+    margin: 0px;
+    font-family: sans-serif;
+    font-size: 17px;
+
+}
+
+div{ 
+    display:inline-block; 
+    padding:0px;  
+} 
+
+#title{
+    width: 100%;
+    background-color:#C0F0F1;
+    height: auto;
+    color: #192338;
+    font-size: 20px;
+    
+}
+
+#expirence{
+    width: 100%;
+    height: auto;
+    text-align: center;
+    background-color: #192338;
+    color: #C0F0F1;
+}
+
+#skills{
+    width: 100%;
+    height: auto;
+    text-align: center;
+    background-color: #192338;
+    color: #C0F0F1;
+}
+#languages{
+    width: 100%;
+    height: auto;
+    text-align: center;
+    background-color: #192338;
+    color: #C0F0F1;
+}
+
+#interests{
+    width: 100%;
+    height: auto;
+    text-align: center;
+    background-color: #192338;
+    color: #C0F0F1;
+}
+
+
+
+#end{
+    width: 100%;
+    background-color: #C0F0F1;
+    color: #192338;
+    height: auto;
+    text-align: center;
+    font-size: 25px;
+    -webkit-text-stroke: 0.1px black;
+
+}
+
+hr{
+    background-color:  #C0F0F1;
+    width: 75.5%;
+    height: 1px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.tables{
+    margin-left: auto;
+    margin-right: auto; 
+    width:80%;
+}
+.main_form{
+    width: 60%;
+    padding: 5px 10px;
+    margin: 5px 0;
+    box-sizing: border-box;
+    border: 2px solid #555;
+    outline: none;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    color: #192338;
+    font-size: 15px;
+}
+input[type='text']:focus {
+    background-color: lightblue;
+    font-size: 19px;
+    
+}
+.submit_button{
+
+    width: 7.5%;
+    padding: 5px 10px;
+    margin: 5px 0;
+    box-sizing: border-box;
+    border: 2px solid #555;
+    outline: none;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    background-color: #00ab66;
+    color:white;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.update_button{
+
+    width: 12%;
+    padding: 5px 10px;
+    margin: 5px 0;
+    box-sizing: border-box;
+    border: 2px solid #555;
+    outline: none;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    background-color: #f0ad4e;
+    color:white;
+    font-size: 17px;
+    font-weight: 600;
+    letter-spacing: 0.4px;
+
+}
+
+.delete_button{
+    padding: 5px 10px;
+    margin-top:2px;
+    box-sizing: border-box;
+    border: 2px solid #555;
+    outline: none;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    background-color: #d9534f;
+    color:white;
+    font-size: 17px;
+    letter-spacing: 0.5px;
+
+}
+a {
+    text-decoration: none; 
+}
+
+select{
+    width: auto;
+    padding: 5px 10px;
+    margin: 5px 0;
+    box-sizing: border-box;
+    border: 1px solid #555;
+    outline: none;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    background-color:#C0F0F1;
+    color:#192338;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+option{
+    background-color:#C0F0F1;
+    color: #192338;
+    text-align: left;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.bad_flash{
+    width: auto;
+    height: auto;
+    /* min-height: 50px; */
+    background-color: rgb(216, 40, 17);
+    font-size: 25px;
+    color: white;
+    text-align: center;
+    
+}
+table{ 
+    border-spacing: 15px;
+    border-collapse: separate;
+  } 
+
+
+th{
+    font-size: 23px;
+    font-weight: 700;
+}
+
+ /* td{
+     border-bottom-style: dotted; 
+}  */
+
+p::first-line {
+    font-size: 24px;
+    line-height: 43px;
+    font-weight: 600;
+  }
