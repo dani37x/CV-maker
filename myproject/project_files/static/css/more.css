@@ -90,7 +90,6 @@ hr{
     font-size: 15px;
 }
 input[type='text']:focus {
-    background-color: lightblue;
     font-size: 19px;
     
 }

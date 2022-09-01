@@ -60,7 +60,7 @@ body{
 
 #center_two{
     width: 100%;
-    height: 1000px;
+    height: 800px;
     background-color:#192338;
     color: white;
 }
@@ -74,7 +74,7 @@ body{
     background-color:#192338;
     position: absolute;
     display: block;
-    margin-top: -43%;
+    margin-top: -35%;
 }
 
 #end{
@@ -106,13 +106,15 @@ div{
 }
 
 img {
-    min-width: 400px;
+    min-width: 500px;
+    max-width: 500px;
     height: auto;  
     border-radius: 10%;
 }
 img:hover {
     box-shadow: 1px 1px 8px 2px grey;
-    width: 65%;
+    min-width: 550px;
+    max-width: 550px;
     height: auto;
     cursor: grab;
   }

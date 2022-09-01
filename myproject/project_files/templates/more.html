@@ -41,7 +41,7 @@
                 </tr>
                     {% for expirence in expirences %}
                 <tr>
-                    <td>{{expirence.name}} </td>
+                    <td style="color:white;">{{expirence.name}} </td>
                     <td >
                         <a class="delete_button" href="/delete/{{expirence.id}}"> delete </a> 
                     </td>
@@ -61,7 +61,7 @@
                 </tr>
                     {% for skill in skills %}
                 <tr>
-                    <td>{{skill.name}}</td>
+                    <td style="color:white;">{{skill.name}}</td>
                     <td >
                         <a class="delete_button"  href="/delete/{{skill.id}}">delete </a>  
                     </td>
@@ -81,8 +81,10 @@
                 </tr>
                     {% for language in languages %}
                 <tr>
-                    <td>{{language.name}}</td>
-                    <td >
+                    <td style="color:white;">
+                        {{language.name}}
+                    </td>
+                    <td>
                         <a class="delete_button"  href="/delete/{{language.id}}">delete </a>  
                     </td>
                     {% endfor %}                    
@@ -101,8 +103,8 @@
                 </tr>
                     {% for interest in interests %}
                 <tr>
-                    <td>{{interest.name}}</td>
-                    <td style="text-align:left;">
+                    <td style="color:white;">{{interest.name}}</td>
+                    <td >
                         <a class="delete_button" href="/delete/{{interest.id}}" > delete </a> 
                     </td>
                 </tr>

@@ -3,15 +3,19 @@
 
 *work in progress*
 
+I created easy CV creator where user can type own data, change colors, add own image and easy and immediately
+delete everything! I created own pages (html, css) to show my frontend basic skills to work with backend. 
+
 I wanted create this project in many different versions, like you can see for example in files 'forms.py' and 'database.py'. I decided do not delete those files, because I have idea for future to add new database with login and flask authenticator.
-
-In some files I want add some things, but almost everything is done what I wanted show in this project in backend. 
-
-I create own pages (html, css) to show my frontend basic skills to work with backend.
+ 
 
 During near two weeks I am going to teach Django and start new project, but I should add new functions to CV-maker.
 
 In requirements.txt you can see all libraries versions.
+
+
+Below you can see how everything look:
+
 
 
 ![page_1,1](https://user-images.githubusercontent.com/97913106/187977688-3e1944a8-3b4a-4304-8d1a-728c10fb1488.png)
