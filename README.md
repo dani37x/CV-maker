@@ -1,5 +1,6 @@
 # CV/PORTFOLIO
 **Creator, where user can make CV/PORTFOLIO with own colors and data.**
+
 *work in progress*
 
 I wanted create this project in many different versions, like you can see for example in files 'forms.py' and 'database.py'. I decided do not delete those files, because I have idea for future to add new database with login and flask authenticator.
