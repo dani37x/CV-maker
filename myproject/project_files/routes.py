@@ -26,7 +26,7 @@ def login():
         file_name = file.filename
         if file_check( file_name=file_name):
             session['file'] = file_name
-            destination = 'D:/projekty/CV/myproject/project_files/static/' + file_name
+            destination = 'D:/projekty/CV-maker/myproject/project_files/static/' + file_name
             session['destination'] = destination
             file.save(destination)     
             return redirect( url_for('page'))
@@ -71,6 +71,8 @@ def logout():
         db.session.query( Informations).delete()
         db.session.commit()
         file_name = session.get('destination')
+        print('xxxxx',file_name)
+
         os.remove( file_name)
         for key in list(session.keys()):
             session.pop(key)
