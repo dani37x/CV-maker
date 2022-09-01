@@ -8,11 +8,6 @@ from project_files.functions import file_check
 import os
 
 
-
-
-# def index():
-#     return render_template('index.html')
-
 @app.route('/' , methods=['GET', 'POST'])
 @app.route('/login', methods=['GET', 'POST'])
 def login():
@@ -31,7 +26,7 @@ def login():
         file_name = file.filename
         if file_check( file_name=file_name):
             session['file'] = file_name
-            destination = 'C:/projekty/CV/myproject/project_files/static/' + file_name
+            destination = 'D:/projekty/CV/myproject/project_files/static/' + file_name
             session['destination'] = destination
             file.save(destination)     
             return redirect( url_for('page'))
