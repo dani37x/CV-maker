@@ -1,10 +1,13 @@
 # CV/PORTFOLIO
 **Creator, where user can make CV/PORTFOLIO with own colors and data.**
 
+
 *work in progress*
 
 I created easy CV creator where user can type own data, change colors, add own image and easy and immediately
 delete everything! I created own pages (html, css) to show my frontend basic skills to work with backend. 
+The project consists of three pages
+
 
 I wanted create this project in many different versions, like you can see for example in files 'forms.py' and 'database.py'. I decided do not delete those files, because I have idea for future to add new database with login and flask authenticator.
  
