@@ -12,8 +12,6 @@ The project consists of three pages
 I wanted create this project in many different versions, like you can see for example in files 'forms.py' and 'database.py'. I decided do not delete those files, because I have idea for future to add new database with login and flask authenticator.
  
 
-During near two weeks I am going to teach Django and start new project, but I should add new functions to CV-maker.
-
 In requirements.txt you can see all libraries versions.
 
 
